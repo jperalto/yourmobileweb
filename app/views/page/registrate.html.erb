@@ -2,72 +2,36 @@
 <h1>Registrate</h1>
 <!-- <p>Find me in app/views/page/registrate.html.erb</p> -->
 
-
 <p>Para ver nuestros productos debes registrarte primero</p>
-<br>
 
-
-<br>
 <br>
 
 <%= form_for :upc, :html => { :method => :post }, :url => { :controller => "page", :action => "para_registro"} do |f| %>
 <br>
 
-<%= f.label :movil %>
-<%= f.text_field :movil,{ :class => "form-control" } %>
+<%= f.label :Numero_de_celular %>
+<%= f.text_field :celular,{ :class => "form-control", :placeholder => "Numero de celular", :required => "required" } %>
 
 <br>
-<br>
 
-<%= f.label :contraseña %>
-<%= f.text_field :contraseña,{ :class => "form-control" } %>
-
-<br>
-<br>
-
-<%= f.label :dni %>
-<%= f.text_field :dni,{ :class => "form-control" } %>
+<%= f.label :Ingresa_tu_contraseña %>
+<%= f.text_field :contraseña,{ :class => "form-control", :placeholder => "Ingresa tu contraseña", :required => "required" } %>
 
 <br>
+
+<%= f.label :Ingresa_tu_DNI %>
+<%= f.text_field :DNI,{ :class => "form-control", :placeholder => "Ingresa tu DNI", :required => "required" } %>
+
 <br>
 
-<%= f.label :email %>
-<%= f.email_field :email,{ :class => "form-control" } %>
+<%= f.label :Ingresa_tu_email %>
+<%= f.email_field :email,{ :class => "form-control", :placeholder => "Ingresa tu email", :required => "required" } %>
 
-<br>
 <br>
 
 <%= f.submit "Continuar", :class => "btn btn-primary" %>
 
 <% end %>
-
-<!--<form>
-
-   Para el N° Movil 
-  <div class="form-group">
-  <label class="exampleInputName">N° Movil</label>
-  <input type="text" id="exampleInputName" placeholder="Ingrese N° Movil" class="form-control">
-  </div>
-
-    Para la contraseña 
-  <div class="form-group">
-  <label class="exampleInputName">Contraseña</label>
-  <input type="text" id="exampleInputName" placeholder="Ingrese Contraseña" class="form-control">
-  </div>
-
-   Para DNI 
-  <div class="form-group">
-  <label class="exampleInputName">DNI</label>
-  <input type="text" id="exampleInputName" placeholder="DNI" class="form-control">
-  </div>
-
-    Para Correo Electronico 
-  <div class="form-group">
-  <label class="exampleInputName">Correo Electronico</label>
-  <input type="text" id="exampleInputName" placeholder="Correo Electronico" class="form-control">
-  </div>
-
-</form>  -->
 
 <br>
 <br>

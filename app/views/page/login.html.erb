@@ -1,7 +1,8 @@
 
 
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWGSWCW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-
+<div class="row">
+  <div class="col-5">
 <!-- <h1>Page#registrate</h1> -->
 
 <h1>Bienvenido a YourMobile</h1>
@@ -12,17 +13,15 @@
 Accede a tus beneficios y más</p>
 <br>
 
-<div class="row">
-  <div class="col-5">
 
         <%= form_for :upc, :html => { :method => :post }  do |f| %>
 
 		<%= f.label :Numero_de_celular%>
-        <%= f.text_field :celular, {:class => "form-control", :placeholder => "N° de Celular", :required => "required"} %>
+        <%= f.text_field :celular, {:class => "form-control", :placeholder => "Numero de Celular", :required => "required"} %>
         <br>
 
         <%= f.label :Ingresa_tu_contraseña %>
-        <%= f.text_field :contraseña, {:class => "form-control", :placeholder => "Ingresar contraseña", :required => "required"} %>
+        <%= f.text_field :contraseña, {:class => "form-control", :placeholder => "Ingresa tu contraseña", :required => "required"} %>
         <br>
 
 

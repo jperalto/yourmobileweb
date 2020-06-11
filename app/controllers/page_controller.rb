@@ -1,4 +1,5 @@
 class PageController < ApplicationController
+  layout 'static'
   def login
   end
 
