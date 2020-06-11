@@ -9,33 +9,33 @@
 <br>
 <br>
 
-<%= form_for :upc, :html => { :method => :get } do |f| %>
+<%= form_for :upc, :html => { :method => :post }, :url => { :controller => "page", :action => "para_registro"} do |f| %>
 
-<%= f.label :Numero_movil %>
-<%= f.text_field :Numero_movil %>
-
-<br>
-<br>
-
-<%= f.label :Contraseña %>
-<%= f.text_field :Contraseña %>
+<%= f.label :movil %>
+<%= f.text_field :movil,{ :class => "form-control" } %>
 
 <br>
 <br>
 
-<%= f.label :DNI %>
-<%= f.text_field :DNI %>
+<%= f.label :contraseña %>
+<%= f.text_field :contraseña,{ :class => "form-control" } %>
 
 <br>
 <br>
 
-<%= f.label :Correo_Electronico %>
-<%= f.email_field :Correo_Electronico %>
+<%= f.label :dni %>
+<%= f.text_field :dni,{ :class => "form-control" } %>
 
 <br>
 <br>
 
-<%= f.submit %>
+<%= f.label :email %>
+<%= f.email_field :email,{ :class => "form-control" } %>
+
+<br>
+<br>
+
+<%= f.submit "Continuar", :class => "btn btn-primary" %>
 
 <% end %>
 
