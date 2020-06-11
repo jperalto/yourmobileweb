@@ -1,3 +1,18 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.product-image img {
+    width: 216px;
+    height: 331px;
+    margin-top: 20px;
+}
+.product-info {
+    margin-top: auto;
+    text-align: center;
+}
+.product-button{
+    margin-top: 12px;
+    align-items: center;
+}
