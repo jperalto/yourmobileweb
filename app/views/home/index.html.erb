@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style type="text/css">
-        .products {
+/*        .products {
             display: flex;
             flex-wrap: wrap;
-        }
-        @media (max-width: 600px) {
+        }*/
+/*        @media (max-width: 600px) {
             .product-card {
                 flex: 1 46%;
             }
-        }
+        }*/
         .product-image img {
             width: 216px;
             height: 331px;
-             margin-top: 20px;
+            margin-top: 20px;
         }
         .product-info {
             margin-top: auto;
@@ -27,9 +28,9 @@
     </style>
 </head>
 <body>
-    <div class="products mx-md-n5">
+    <div class="container">
 
-        <div class="product-card">
+        <div class="product-card col-1 col-md-3">
             <div class="product-image">
                 <%= image_tag "equipo4.jpg", html: {alt: "Imagen equipo4"} %>
             </div>
@@ -46,7 +47,7 @@
 <!--         <br>
         <br> -->
         
-        <div class="product-card">
+        <div class="product-card col-1 col-md-3">
             <div class="product-image">
                 <%= image_tag "equipo1.jpg", html: {alt: "Imagen equipo1"} %>
             </div>
@@ -63,7 +64,7 @@
 <!--         <br>
         <br> -->
 
-        <div class="product-card">
+        <div class="product-card col-1 col-md-3">
             <div class="product-image">
                 <%= image_tag "equipo2.jpg", html: {alt: "Imagen equipo2"} %>
             </div>
@@ -80,7 +81,7 @@
 <!--         <br>
         <br> -->
 
-        <div class="product-card">
+        <div class="product-card col-1 col-md-3">
             <div class="product-image">
                 <%= image_tag "equipo3.jpg", html: {alt: "Imagen equipo3"} %>
             </div>
@@ -94,7 +95,7 @@
             </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card col-1 col-md-3">
             <div class="product-image">
                 <%= image_tag "equipo3.jpg", html: {alt: "Imagen equipo3"} %>
             </div>
@@ -108,7 +109,7 @@
             </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card col-1 col-md-3">
             <div class="product-image">
                 <%= image_tag "equipo3.jpg", html: {alt: "Imagen equipo3"} %>
             </div>
