@@ -9,33 +9,63 @@
 <br>
 <br>
 
-<form>
+<%= form_for :upc, :html => { :method => :get } do |f| %>
 
-  <!-- Para el N° Movil -->
+<%= f.label :Numero_movil %>
+<%= f.text_field :Numero_movil %>
+
+<br>
+<br>
+
+<%= f.label :Contraseña %>
+<%= f.text_field :Contraseña %>
+
+<br>
+<br>
+
+<%= f.label :DNI %>
+<%= f.text_field :DNI %>
+
+<br>
+<br>
+
+<%= f.label :Correo_Electronico %>
+<%= f.email_field :Correo_Electronico %>
+
+<br>
+<br>
+
+<%= f.submit %>
+
+<% end %>
+
+<!--<form>
+
+   Para el N° Movil 
   <div class="form-group">
   <label class="exampleInputName">N° Movil</label>
   <input type="text" id="exampleInputName" placeholder="Ingrese N° Movil" class="form-control">
   </div>
 
-   <!-- Para la contraseña -->
+    Para la contraseña 
   <div class="form-group">
   <label class="exampleInputName">Contraseña</label>
   <input type="text" id="exampleInputName" placeholder="Ingrese Contraseña" class="form-control">
   </div>
 
-   <!-- Para DNI -->
+   Para DNI 
   <div class="form-group">
   <label class="exampleInputName">DNI</label>
   <input type="text" id="exampleInputName" placeholder="DNI" class="form-control">
   </div>
 
-   <!-- Para Correo Electronico -->
+    Para Correo Electronico 
   <div class="form-group">
   <label class="exampleInputName">Correo Electronico</label>
   <input type="text" id="exampleInputName" placeholder="Correo Electronico" class="form-control">
   </div>
 
-</form>
+</form>  -->
 
 <br>
 <br>
