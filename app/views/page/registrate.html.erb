@@ -4,12 +4,14 @@
 
 
 <p>Para ver nuestros productos debes registrarte primero</p>
+<br>
 
 
 <br>
 <br>
 
 <%= form_for :upc, :html => { :method => :post }, :url => { :controller => "page", :action => "para_registro"} do |f| %>
+<br>
 
 <%= f.label :movil %>
 <%= f.text_field :movil,{ :class => "form-control" } %>
