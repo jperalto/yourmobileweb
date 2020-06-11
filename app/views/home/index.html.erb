@@ -2,63 +2,123 @@
 <html>
 <head>
     <style type="text/css">
-
-        .imagen-style{
-/*            display: block;
-            float:left;
-            box-sizing: border-box;*/
-            flex-direction: row-reverse;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            max-width: 300px;
-            margin: auto;
-            text-align: center;
-            font-family: arial;
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+/*            border: solid;*/
         }
-
+        @media (max-width: 600px) {
+            .product-card {
+                flex: 1 46%;
+/*                margin: initial;
+                padding: initial;*/
+            }
+        }
+        .product-image img {
+            width: 216px;
+            height: 331px;
+/*            border: solid;*/
+        }
+        .product-info {
+            margin-top: auto;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <!-- <div class="catalogo" style="border: solid"> -->
+    <div class="products mx-md-n5">
 
-        <div class="card imagen-style" style="border-bottom: 0;">
-            <%= image_tag "equipo4.jpg", html: {alt: "Imagen equipo4"} %>
-            <div>
+        <div class="product-card">
+            <div class="product-image">
+                <%= image_tag "equipo4.jpg", html: {alt: "Imagen equipo4"} %>
+            </div>
+<!--             <div class="product-info">
+                <h5>Precio al contado</h5>
+                <h6>S/ 2799</h6>
+            </div> -->
+<!--             <div class="product-buttons">
                 <a href="#" class="btn btn-primary">Lo quiero</a>
                 <a href="equipos/samsungs10" class="btn btn-primary">Detalles</a>
-            </div>
+            </div> -->
         </div>
 
-        <br>
-        <br>
+<!--         <br>
+        <br> -->
         
-        <div class="card imagen-style" style="border-bottom: 0;">
-            <%= image_tag "equipo1.jpg", html: {alt: "Imagen equipo1"} %>
-            <div>
+        <div class="product-card">
+            <div class="product-image">
+                <%= image_tag "equipo1.jpg", html: {alt: "Imagen equipo1"} %>
+            </div>
+<!--             <div class="product-info">
+                <h5>Precio al contado</h5>
+                <h6>S/ 1429</h6>
+            </div> -->
+<!--             <div>
                 <a href="#" class="btn btn-primary">Lo quiero</a>
                 <a href="equipos/samsumga51" class="btn btn-primary">Detalles</a>
-            </div>
+            </div> -->
         </div>
 
-        <br>
-        <br>
+<!--         <br>
+        <br> -->
 
-        <div class="card imagen-style" style="border-bottom: 0;">
-            <%= image_tag "equipo2.jpg", html: {alt: "Imagen equipo2"} %>
-            <div>
+        <div class="product-card">
+            <div class="product-image">
+                <%= image_tag "equipo2.jpg", html: {alt: "Imagen equipo2"} %>
+            </div>
+<!--             <div class="product-info">
+                <h5>Precio al contado</h5>
+                <h6>S/ 829</h6>
+            </div> -->
+<!--             <div>
                 <a href="#" class="btn btn-primary">Lo quiero</a>
                 <a href="equipos/motorolla" class="btn btn-primary">Detalles</a>
-            </div>
+            </div> -->
         </div>
 
-        <br>
-        <br>
+<!--         <br>
+        <br> -->
 
-        <div class="card imagen-style" style="border-bottom: 0;">
-            <%= image_tag "equipo3.jpg", html: {alt: "Imagen equipo3"} %>
-            <div>
+        <div class="product-card">
+            <div class="product-image">
+                <%= image_tag "equipo3.jpg", html: {alt: "Imagen equipo3"} %>
+            </div>
+<!--             <div class="product-info">
+                <h5>Precio al contado</h5>
+                <h6>S/ 3859</h6>
+            </div> -->
+<!--             <div>
                 <a href="#" class="btn btn-primary">Lo quiero</a>
                 <a href="equipos/huaweip40" class="btn btn-primary">Detalles</a>
+            </div> -->
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <%= image_tag "equipo3.jpg", html: {alt: "Imagen equipo3"} %>
             </div>
+<!--             <div class="product-info">
+                <h5>Precio al contado</h5>
+                <h6>S/ 3859</h6>
+            </div> -->
+<!--             <div>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+                <a href="equipos/huaweip40" class="btn btn-primary">Detalles</a>
+            </div> -->
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <%= image_tag "equipo3.jpg", html: {alt: "Imagen equipo3"} %>
+            </div>
+<!--             <div class="product-info">
+                <h5>Precio al contado</h5>
+                <h6>S/ 3859</h6>
+            </div> -->
+<!--             <div>
+                <a href="#" class="btn btn-primary">Lo quiero</a>
+                <a href="equipos/huaweip40" class="btn btn-primary">Detalles</a>
+            </div> -->
         </div>
     </div>
 
