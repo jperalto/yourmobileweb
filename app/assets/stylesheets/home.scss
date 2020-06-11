@@ -3,16 +3,22 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
-.product-image img {
-    width: 216px;
-    height: 331px;
-    margin-top: 20px;
-}
 .product-info {
     margin-top: auto;
     text-align: center;
 }
-.product-button{
-    margin-top: 12px;
-    align-items: center;
+
+.product-card {
+
+        
+    .product-image img {
+        width: 216px;
+        height: 331px;
+        margin-top: 20px;
+    }
+
+    & > .row {
+        margin-top: 12px;
+    }
+
 }
