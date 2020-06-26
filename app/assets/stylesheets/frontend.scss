@@ -1,5 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Cairo:300,400,600|Lobster|Pacifico&display=swap&subset=cyrillic,cyrillic-ext');
-@import '../frontend/style.scss';
 
-@import 'bootstrap';
+
+/*=================== fonts ====================*/
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,500,600');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
+@import '../lib/bootstrap/bootstrap';
+@import 'frontend/style.scss';

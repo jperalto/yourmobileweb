@@ -1,3 +1,6 @@
+import 'bootstrap';
+import 'jquery';
+import 'jquery-nice-select';
 
 require("@rails/ujs").start();
 require("turbolinks").start();
