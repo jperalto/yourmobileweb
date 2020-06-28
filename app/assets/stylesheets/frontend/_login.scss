@@ -97,7 +97,7 @@
 .login_form{
 	.form-group{
     margin-bottom: 22px;
-		input{
+		input:not([type='submit']){
 			height: 40px;
 			border: none;
 			border-bottom: 1px solid #cccccc;
