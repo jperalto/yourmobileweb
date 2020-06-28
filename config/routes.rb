@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'login' => "login#index"
+
   get 'shop' => 'shop#index'
   get 'shop/index'
 
