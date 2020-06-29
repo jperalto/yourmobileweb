@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :marcas
   get 'logout' => 'sessions#logout'
   get 'login' => "sessions#login"
   post 'login' => "sessions#validar"

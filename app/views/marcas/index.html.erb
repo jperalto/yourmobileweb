@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h4 class="page-title">Marcas</h4>
+
+
+<div class="row">
+
+  <div class="col-md-12">
+		<div class="card">
+      <div class="card-header">
+        <div class="card-title">Lista de marcas disponibles</div>
+      </div>
+			<div class="card-body">
+				
+      <table class='table table-striped'>
+        <thead>
+          <tr>
+            <th>Descripcion</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @marcas.each do |marca| %>
+            <tr>
+              <td><%= marca.descripcion %></td>
+              <td><%= link_to 'Show', marca %></td>
+              <td><%= link_to 'Edit', edit_marca_path(marca) %></td>
+              <td><%= link_to 'Destroy', marca, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Eliminar', { :action => :destroy, :id => post.id }, :method => :delete, :data => { :confirm => "Estas seguro de eliminar?" }  %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+<br>
+
+<%= link_to 'New Marca', new_marca_path %>
