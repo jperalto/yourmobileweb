@@ -46,25 +46,15 @@
 				</div>
 				<div class="col-lg-6">
 					<div class="login_form_inner">
-						<h3>Inicia Sesión</h3>
+						<h3>Recuperar contraseña</h3>
 
-                        <%= form_tag '/login', class: 'row login_form' do %>
+                        <%= form_tag '/olvidemiclave', class: 'row login_form' do %>
 
                             <div class="col-md-12 form-group">
-   		                        <%= text_field_tag :username, nil, class: 'form-control', placeholder: 'Usuario'  %>
+   		                        <%= text_field_tag :username, nil, class: 'form-control', placeholder: 'Correo electrónico'  %>
 							</div>
 							<div class="col-md-12 form-group">
-   		                        <%= text_field_tag :password, nil, class: 'form-control', placeholder: 'Contraseña'  %>
-							</div>
- 							<div class="col-md-12 form-group">
-								<div class="creat_account">
-									<input type="checkbox" id="f-option2" name="selector">
-									<label for="f-option2">Mantenerme conectado</label>
-								</div>
-							</div>
-							<div class="col-md-12 form-group">
-                                <%= submit_tag "Iniciar Sesión", class: 'button button-login w-100' %>
-                                <%= link_to 'Olvidé mi contraseña', olvidemiclave_path %>
+                                <%= submit_tag "Recuperar contraseña", class: 'button button-login w-100' %>
 							</div>                      
                             <div class="errors">
                                     <% if flash[:login_errors] %>

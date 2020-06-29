@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'logout' => 'sessions#logout'
   get 'login' => "sessions#login"
   post 'login' => "sessions#validar"
+  get 'olvidemiclave' => "page#olvidemiclave"
   get 'register' => "page#registrate"
   get 'recover' => "sessions#recover"
   get 'contact' => "page#contact"
