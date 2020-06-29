@@ -1,5 +1,5 @@
 class EquiposController < ApplicationController
-	layout 'static'
+	layout 'frontend'
   def motorolla
   end
 

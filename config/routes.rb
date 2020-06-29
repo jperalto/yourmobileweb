@@ -6,11 +6,7 @@ Rails.application.routes.draw do
   post 'login' => "sessions#validar"
   get 'recover' => "sessions#recover"
   get 'contact' => "page#contact"
-
   get 'main' => "homeuser#index"
-
-
-
   get 'shop' => 'shop#index'
   get 'shop/index'
 
