@@ -1,0 +1,32 @@
+<%= form_with(model: modelo, local: true) do |form| %>
+  <% if modelo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(modelo.errors.count, "error") %> prohibited this modelo from being saved:</h2>
+
+      <ul>
+        <% modelo.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field mt-2">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, class: 'form-control'  %>
+  </div>
+
+  <div class="field mt-2">
+    <%= form.label :marca %>
+    <%= form.text_field :marca, class: 'form-control'  %>
+  </div>
+
+  <div class="field mt-2">
+    <%= form.label :references %>
+    <%= form.text_field :references, class: 'form-control' %>
+  </div>
+
+  <div class="actions mt-3">
+    <%= form.submit 'Agregar modelo', class: 'btn btn-success'  %>
+  </div>
+<% end %>

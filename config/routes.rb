@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :plans
+  resources :modelos
   resources :marcas
   get 'logout' => 'sessions#logout'
   get 'login' => "sessions#login"
   post 'login' => "sessions#validar"
+  get 'register' => "page#registrate"
   get 'recover' => "sessions#recover"
   get 'contact' => "page#contact"
 
@@ -24,11 +27,11 @@ Rails.application.routes.draw do
   get 'equipos/samsungs10'
   get 'equipos/huaweip40'
   get 'equipos/samsumga51'
-  get 'page/login'
-  get 'page/registrate'
-  post 'page/para_registro'
+#  get 'page/login'
+#  get 'page/registrate'
+#  post 'page/para_registro'
   
-  get 'page/planes'
+#  get 'page/planes'
 
   
 
