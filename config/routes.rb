@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'login' => "sessions#login"
   post 'login' => "sessions#validar"
   get 'recover' => "sessions#recover"
+  get 'contact' => "page#contact"
 
   get 'main' => "homeuser#index"
 
@@ -13,6 +14,10 @@ Rails.application.routes.draw do
   get 'shop' => 'shop#index'
   get 'shop/index'
 
+  get 'home/aboutus'
+
+
+
 
 
   get 'equipos/motorolla'
@@ -20,7 +25,6 @@ Rails.application.routes.draw do
   get 'equipos/huaweip40'
   get 'equipos/samsumga51'
   get 'page/login'
-  
   get 'page/registrate'
   post 'page/para_registro'
   
