@@ -1,8 +1,24 @@
 Rails.application.routes.draw do
 
+  get 'logout' => 'sessions#logout'
+  get 'login' => "sessions#login"
+  post 'login' => "sessions#validar"
+  get 'recover' => "sessions#recover"
+  get 'contact' => "page#contact"
+
+  get 'main' => "homeuser#index"
+
+
+
   get 'shop' => 'shop#index'
   get 'shop/index'
+
   get 'home/aboutus'
+
+
+
+
+
   get 'equipos/motorolla'
   get 'equipos/samsungs10'
   get 'equipos/huaweip40'
@@ -12,6 +28,9 @@ Rails.application.routes.draw do
   post 'page/para_registro'
   
   get 'page/planes'
+
+  
+
   
   root 'home#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
