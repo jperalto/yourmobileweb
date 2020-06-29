@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  precio: 1.5
+  sms: 1
+  minutos: 1
+  datosGB: 1.5
+  redes: false
+
+two:
+  nombre: MyString
+  precio: 1.5
+  sms: 1
+  minutos: 1
+  datosGB: 1.5
+  redes: false

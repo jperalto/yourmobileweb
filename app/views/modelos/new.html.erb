@@ -1,20 +1,22 @@
 
+
 <div class="row">
     <div class="col-12">
         <div class="card">
 
             <div class="card-header">
-                <div class="card-title">Marca</div>
+                <div class="card-title">Modelo</div>
 
             </div>
             <div class="card-body">
+                <%= render 'form', modelo: @modelo %>
 
-                <%= render 'form', marca: @marca %>
             </div>
         </div>
     
     </div>
 </div>
 
-<%= link_to 'Back', marcas_path, class: 'btn btn-link' %>
 
+
+<%= link_to 'Back', modelos_path, class: 'btn btn-link' %>

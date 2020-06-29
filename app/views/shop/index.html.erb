@@ -119,7 +119,12 @@
                     <%= image_tag "https://entelperu.vteximg.com.br/arquivos/ids/202424/p40-pro-silver.png?v=637250639806330000", html: {class: "card-img"} %>
                     <!-- <img class="card-img" src="img/product/product1.png" alt=""> -->
                     <ul class="card-product__imgOverlay">
-                      <li><button><i class="ti-search"></i></button></li>
+                      <li>
+                        <%= button_to '/equipos/huaweip40', method: 'get' do %>
+                          <i class="ti-search"></i>
+                        <% end %>
+                      </li>
+                      <!--<li><button><i class="ti-search"></i></button></li>-->
                       <li><button><i class="ti-shopping-cart"></i></button></li>
                       <li><button><i class="ti-heart"></i></button></li>
                     </ul>
