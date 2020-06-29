@@ -1,2 +1,274 @@
-<h1>Page#planes</h1>
-<p>Find me in app/views/page/planes.html.erb</p>
+
+
+<%= content_for :styles do %>
+
+	<%= stylesheet_link_tag 'shop', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<% end %> 
+
+<%= content_for :banner do %>
+
+	<!-- ================ start banner area ================= -->	
+	<section class="blog-banner-area" id="category">
+		<div class="container h-100">
+			<div class="blog-banner">
+				<div class="text-center">
+					<h1>Elige tu Plan</h1>
+					<nav aria-label="breadcrumb" class="banner-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Shop Category</li>
+            </ol>
+          </nav>
+				</div>
+			</div>
+    </div>
+	</section>
+	<!-- ================ end banner area ================= -->
+
+<% end %>
+
+  
+  
+
+  <!--================Cart Area =================-->
+  <section class="cart_area">
+      <div class="container">
+          <div class="cart_inner">
+              <div class="table-responsive">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th scope="col">Plan</th>
+                              <th scope="col">Megas</th>
+                              <th scope="col">Cantidad</th>
+                              <th scope="col">Precio</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>
+                                  <div class="media">
+                                      <div class="d-flex">
+                                          <img src="img/cart/cart1.png" alt="">
+                                      </div>
+                                      <div class="media-body">
+                                          <p>Yapa + Whatsapp Ilimitado</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>200 MB</h5>
+                              </td>
+                              <td>
+                                  <div class="product_count">
+                                      <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+                                          class="input-text qty">
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+                                          class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+                                          class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>S/3.00</h5>
+                              </td>
+
+                          </tr>
+                          <tr>
+                              <td>
+                                  <div class="media">
+                                      <div class="d-flex">
+                                          <img src="img/cart/cart2.png" alt="">
+                                      </div>
+                                      <div class="media-body">
+                                          <p>Whatsapp Ilimitado + Facebook</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>500 MB</h5>
+                              </td>
+                              <td>
+                                  <div class="product_count">
+                                      <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+                                          class="input-text qty">
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+                                          class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+                                          class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>S/5.00</h5>
+                              </td>
+
+                          </tr>
+                          <tr>
+                              <td>
+                                  <div class="media">
+                                      <div class="d-flex">
+                                          <img src="img/cart/cart3.png" alt="">
+                                      </div>
+                                      <div class="media-body">
+                                          <p>Whatsapp Ilimitado + Facebook + Mensajes</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>1 GB</h5>
+                              </td>
+                              <td>
+                                  <div class="product_count">
+                                      <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+                                          class="input-text qty">
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+                                          class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+                                          class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>S/10.00</h5>
+                              </td>
+
+                               <tr>
+                              <td>
+                                  <div class="media">
+                                      <div class="d-flex">
+                                          <img src="img/cart/cart3.png" alt="">
+                                      </div>
+                                      <div class="media-body">
+                                          <p>Minimalistic shop for multipurpose use</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>5 GB</h5>
+                              </td>
+                              <td>
+                                  <div class="product_count">
+                                      <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+                                          class="input-text qty">
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+                                          class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+                                          class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>S/25.00</h5>
+                              </td>
+
+                               <tr>
+                              <td>
+                                  <div class="media">
+                                      <div class="d-flex">
+                                          <img src="img/cart/cart3.png" alt="">
+                                      </div>
+                                      <div class="media-body">
+                                          <p>Minimalistic shop for multipurpose use</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>10 GB</h5>
+                              </td>
+                              <td>
+                                  <div class="product_count">
+                                      <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+                                          class="input-text qty">
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+                                          class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+                                          class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>S/50.00</h5>
+                              </td>
+
+                               <tr>
+                              <td>
+                                  <div class="media">
+                                      <div class="d-flex">
+                                          <img src="img/cart/cart3.png" alt="">
+                                      </div>
+                                      <div class="media-body">
+                                          <p>Minimalistic shop for multipurpose use</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>20 GB</h5>
+                              </td>
+                              <td>
+                                  <div class="product_count">
+                                      <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+                                          class="input-text qty">
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+                                          class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+                                          class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>S/75.00</h5>
+                              </td>
+
+                               <tr>
+                              <td>
+                                  <div class="media">
+                                      <div class="d-flex">
+                                          <img src="img/cart/cart3.png" alt="">
+                                      </div>
+                                      <div class="media-body">
+                                          <p>Minimalistic shop for multipurpose use</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>50 GB</h5>
+                              </td>
+                              <td>
+                                  <div class="product_count">
+                                      <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
+                                          class="input-text qty">
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+                                          class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+                                          class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                                  </div>
+                              </td>
+                              <td>
+                                  <h5>S/100.00</h5>
+                              </td>
+                          </tr>
+
+
+
+                          <tr class="bottom_button">
+                              <td>
+                                  <a class="button" href="#">Actualizar Pedido</a>
+                              </td>
+                              <td>
+
+                              </td>
+                              <td>
+
+                              </td>
+                              <td>
+                         
+                                  <div class="checkout_btn_inner d-flex align-items-center">
+                                      <a class="gray_btn" href="#">Continue Shopping</a>
+                                      <a class="primary-btn ml-2" href="#">Proceed to checkout</a>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--================End Cart Area =================-->

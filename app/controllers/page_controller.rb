@@ -9,6 +9,9 @@ class PageController < ApplicationController
   def contact
   end
 
+  def planes
+  end
+
   def para_registro
 
   	puts " ----------- Datos recibidos de la página registro -----------"
