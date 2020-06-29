@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="row">
+
+  <div class="col-md-12">
+		<div class="card">
+      <div class="card-header">
+        <div class="card-title">Planes</div>
+      </div>
+			<div class="card-body">
+				
+        
+        <table class='table table-striped'>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Sms</th>
+              <th>Minutos</th>
+              <th>Datosgb</th>
+              <th>Redes</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @plans.each do |plan| %>
+              <tr>
+                <td><%= plan.nombre %></td>
+                <td><%= plan.precio %></td>
+                <td><%= plan.sms %></td>
+                <td><%= plan.minutos %></td>
+                <td><%= plan.datosGB %></td>
+                <td><%= plan.redes %></td>
+                <td><%= link_to 'Show', plan %></td>
+                <td><%= link_to 'Edit', edit_plan_path(plan) %></td>
+                <td><%= link_to 'Destroy', plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+
+
+<br>
+
+<%= link_to 'New Plan', new_plan_path, class: 'btn btn-outline-info'%>
