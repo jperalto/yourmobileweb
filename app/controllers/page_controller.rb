@@ -1,9 +1,12 @@
 class PageController < ApplicationController
-  layout 'static'
+  layout 'frontend'
   def login
   end
 
   def registrate
+  end
+
+  def contact
   end
 
   def para_registro

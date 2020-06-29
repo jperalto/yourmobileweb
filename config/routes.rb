@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'login' => "sessions#login"
   post 'login' => "sessions#validar"
   get 'recover' => "sessions#recover"
+  get 'contact' => "page#contact"
 
   get 'main' => "homeuser#index"
 
