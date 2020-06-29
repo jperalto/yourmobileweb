@@ -6,6 +6,9 @@ class PageController < ApplicationController
   def registrate
   end
 
+  def olvidemiclave
+  end
+
   def contact
   end
 
