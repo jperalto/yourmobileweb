@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'recover' => "sessions#recover"
   get 'contact' => "page#contact"
 
+  get 'planes' => "page#planes"
+
   get 'main' => "homeuser#index"
 
 
