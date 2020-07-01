@@ -10,12 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_01_032831) do
+ActiveRecord::Schema.define(version: 2020_07_01_044501) do
 
   create_table "marcas", force: :cascade do |t|
     t.string "descripcion"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "mobiles", force: :cascade do |t|
+    t.integer "marca_id", null: false
+    t.integer "modelo_id", null: false
+    t.float "precio"
+    t.integer "stock"
+    t.string "imagen"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["marca_id"], name: "index_mobiles_on_marca_id"
+    t.index ["modelo_id"], name: "index_mobiles_on_modelo_id"
   end
 
   create_table "modelos", force: :cascade do |t|
@@ -44,5 +56,7 @@ ActiveRecord::Schema.define(version: 2020_07_01_032831) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "mobiles", "marcas"
+  add_foreign_key "mobiles", "modelos"
   add_foreign_key "modelos", "marcas"
 end

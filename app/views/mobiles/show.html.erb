@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= link_to 'Edit', edit_mobile_path(@mobile), :class => 'btn btn-link' %> |
+<%= link_to 'Back', mobiles_path, :class => 'btn btn-link' %>
+
+
+<div class="row">
+
+  <div class="col-md-12">
+		<div class="card">
+      <div class="card-header">
+        <div class="card-title">
+          Equipo:
+          <%= Marca.select(:descripcion).where('id = ' + @mobile.marca_id.to_s).collect(&:descripcion)[0] %> -
+          <%= Modelo.select(:descripcion).where('id = ' + @mobile.modelo_id.to_s).collect(&:descripcion)[0] %>
+        </div>
+      </div>
+			<div class="card-body">
+
+        <div class="row">
+          <div class="col-12 col-md-7">
+
+            <p>
+              <strong>Precio:</strong>
+              <%= @mobile.precio %>
+            </p>
+
+            <p>
+              <strong>Stock:</strong>
+              <%= @mobile.stock %>
+            </p>
+
+          </div>
+
+          <div class="col-12 col-md-5">
+            <%= image_tag(@mobile.imagen.url, :class => 'img-fluid img-thumbnail') if @mobile.imagen.present? %>
+
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+
+          </div>
+        </div>
+      
+			</div>
+		</div>
+	</div>
+
+
+</div>

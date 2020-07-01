@@ -1,0 +1,45 @@
+<%= form_with(model: mobile, local: true, :html => { multipart: true }) do |form| %>
+  <% if mobile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mobile.errors.count, "error") %> prohibited this mobile from being saved:</h2>
+
+      <ul>
+        <% mobile.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :marca_id %>
+    <%= form.select :marca_id, Marca.all.collect {|m| [m.descripcion, m.id] }, { :include_blank => 'Seleccione marca' }, { :class => 'form-control' } %>
+
+  </div>
+
+  <div class="field mt-2">
+    <%= form.label :modelo_id %>
+    <%= form.select :modelo_id, Modelo.all.collect {|m| [m.descripcion, m.id] }, { :include_blank => 'Seleccione modelo' }, { :class => 'form-control' } %>
+
+  </div>
+
+  <div class="field mt-2">
+    <%= form.label :precio %>
+    <%= form.text_field :precio, :class => 'form-control' %>
+  </div>
+
+  <div class="field mt-2">
+    <%= form.label :stock %>
+    <%= form.number_field :stock, :class => 'form-control' %>
+  </div>
+
+  <div class="field mt-2">
+    <%= form.label :imagen %>
+    <%= form.file_field :imagen, :class => 'form-control-file' %>
+    <!--<%= form.text_field :imagen, :class => 'form-control' %>-->
+  </div>
+
+  <div class="actions mt-3">
+    <%= form.submit 'Agregar Equipo', :class => 'btn btn-success' %>
+  </div>
+<% end %>
