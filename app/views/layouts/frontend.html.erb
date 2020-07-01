@@ -100,12 +100,25 @@
             </ul>
 
             <ul class="nav-shop">
-              <li class="nav-item"><button><i class="ti-search"></i></button></li>
-              <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
-              <li class="nav-item">
+              <!--<li class="nav-item"><button><i class="ti-search"></i></button></li>-->
+			  <% if ( user_signed_in? )  %>
+              	<li class="nav-item">
+				  <!--<button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button>-->
+				  <button>
+					<%= link_to main_path do  %>
+						<i class="ti-user"></i>
+						<span class="nav-shop__circle">3</span>
+					<% end %>
+				  </button>
+				</li>
+			  <% else %>
+			  	<%= link_to 'Login', new_user_session_path, class: 'button button-header' %> 
+			  <% end %>
+
+              <!--<li class="nav-item">
 			  	<%= link_to 'Login', "/login", class: 'button button-header' %> 
-			   	<!--<a class="button button-header" href="#">Buy Now</a>-->
-			  </li>
+			  </li>-->
+			  
 
             </ul>
           </div>
@@ -120,11 +133,9 @@
 
   
 
-
-  	<!--================Login Box Area =================-->
-  	<div class="container mt-4 mb-4">
-	    
   	<!--================ Session Area =================-->
+<div class="container">
+
 
 		<p class="navbar-text float-right">
 <% if user_signed_in? %>
@@ -142,7 +153,12 @@
 		<% if alert %>
 		<p class="alert alert-danger"><%= alert %></p>
 		<% end %>
+</div>
   	<!--================ End Session Area =================-->
+
+  	<!--================Login Box Area =================-->
+  	<div class="container mt-4 mb-4">
+	    
 
 
 	  <%= yield %>

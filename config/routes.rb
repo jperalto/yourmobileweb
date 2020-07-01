@@ -1,14 +1,20 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, controllers: { 
+    sessions: 'users/sessions',
+    confirmations: 'users/confirmations',
+    #omniauth: 'users/omniauth',
+    passwords: 'users/passwords',
+    registrations: 'users/registrations',
+    unlocks: 'users/unlocks'
+  }
+
   resources :mobiles
   resources :modelos
   resources :plans
   
   resources :marcas
-  get 'logout' => 'sessions#logout'
-  get 'login' => "sessions#login"
-  post 'login' => "sessions#validar"
+
   get 'olvidemiclave' => "page#olvidemiclave"
   get 'register' => "page#registrate"
   get 'recover' => "sessions#recover"

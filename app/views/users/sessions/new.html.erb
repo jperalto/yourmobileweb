@@ -1,0 +1,86 @@
+
+
+
+<%= content_for :styles do %>
+
+	<%= stylesheet_link_tag 'login', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<% end %>
+
+<%= content_for :banner do %>
+
+  <!-- ================ start banner area ================= -->	
+	<section class="blog-banner-area" id="category">
+		<div class="container h-100">
+			<div class="blog-banner">
+				<div class="text-center">
+					<h1>Login / Registrate</h1>
+					<nav aria-label="breadcrumb" class="banner-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Login/Registrate</li>
+            </ol>
+          </nav>
+				</div>
+			</div>
+    </div>
+	</section>
+	<!-- ================ end banner area ================= -->
+
+<% end %>
+
+
+  <!--================Login Box Area =================-->
+	<section class="login_box_area section-margin">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="login_box_img">
+						<div class="hover">
+							<h4>Nuevo en nuestra página?</h4>
+							<p>YourMobile te ayuda a comunicarte y compartir con las personas que forman parte de tu vida, únete.</p>
+              <%= link_to "Registrate", new_registration_path(resource_name), :class => 'button button-account' %><br />
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="login_form_inner">
+						<h3>Inicia Sesión</h3>
+
+                          
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { :class => 'row login_form'}) do |f| %>
+                <div class="col-md-12 form-group">
+                  <!--<%= f.label :email %><br />-->
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => 'form-control', :placeholder => 'Usuario' %>
+                </div>
+
+                <div class="col-md-12 form-group">
+                  <!--<%= f.label :password %><br />-->
+                  <%= f.password_field :password, autocomplete: "current-password", :class => 'form-control', :placeholder => 'Contraseña' %>
+                </div>
+
+                <% if devise_mapping.rememberable? %>
+                  <div class="col-md-12 form-group">
+                    <div class="creat_account">
+                      <%= f.check_box :remember_me %>
+                      <%= f.label :remember_me, 'Mantenerme conectado' %>
+                    </div>
+                  </div>
+                <% end %>
+
+                <div class="col-md-12 form-group">
+                  <%= f.submit "Iniciar Sesión", class: 'button button-login w-100' %>
+                  <%= link_to "Olvidé mi contraseña", new_password_path(resource_name) %><br />
+                </div>
+              <% end %>
+
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Login Box Area =================-->
+
+

@@ -1,4 +1,4 @@
-class HomeuserController < ValidationController
+class HomeuserController < ApplicationController
     layout 'backend'
 
     def index 
