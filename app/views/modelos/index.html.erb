@@ -1,6 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-
 <div class="row">
 
   <div class="col-md-12">
@@ -9,30 +8,32 @@
         <div class="card-title">Lista de modelos</div>
       </div>
 			<div class="card-body">
-              
-        <table class='table table-striped'>
-          <thead>
-            <tr>
-              <th>Descripcion</th>
-              <th>Marca</th>
-              <th>References</th>
-              <th colspan="3"></th>
-            </tr>
-          </thead>
+				
+      <table class='table table-striped'>
+        <thead>
+          <tr>
+            <th>Descripcion</th>
+            <th>Marca</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
 
-          <tbody>
-            <% @modelos.each do |modelo| %>
-              <tr>
-                <td><%= modelo.descripcion %></td>
-                <td><%= modelo.marca %></td>
-                <td><%= modelo.references %></td>
-                <td><%= link_to 'Show', modelo %></td>
-                <td><%= link_to 'Edit', edit_modelo_path(modelo) %></td>
-                <td><%= link_to 'Destroy', modelo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
+        <tbody>
+          <% @modelos.each do |modelo| %>
+            <tr>
+              <td><%= modelo.descripcion %></td>
+              
+              <td>
+                <%= Marca.select(:descripcion).where('id = ' + modelo.marca_id.to_s).collect(&:descripcion)[0] %>
+              </td>
+              <td>
+                <%= link_to('Edit', edit_modelo_path(modelo)) %>
+              </td>
+              <td><%= link_to 'Destroy', modelo, :method => :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
 			</div>
 		</div>
@@ -41,7 +42,6 @@
 
 </div>
 
-
 <br>
 
-<%= link_to 'Agregar modelo', new_modelo_path, class: 'btn btn-outline-info'  %>
+<%= link_to 'New Modelo', new_modelo_path, :class => 'btn btn-outline-info' %>

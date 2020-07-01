@@ -1,6 +1,21 @@
-<h1>Editing Marca</h1>
 
-<%= render 'form', marca: @marca %>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
 
-<%= link_to 'Show', @marca %> |
-<%= link_to 'Back', marcas_path %>
+            <div class="card-header">
+                <div class="card-title">Editar marca</div>
+
+            </div>
+            <div class="card-body">
+
+                <%= render 'form', marca: @marca %>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+
+<%= link_to 'Show', @marca, class: 'btn btn-link'  %> |
+<%= link_to 'Back', marcas_path, class: 'btn btn-link' %>

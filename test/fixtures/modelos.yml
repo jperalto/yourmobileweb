@@ -2,10 +2,8 @@
 
 one:
   descripcion: MyString
-  marca: MyString
-  references: MyString
+  marca: one
 
 two:
   descripcion: MyString
-  marca: MyString
-  references: MyString
+  marca: two

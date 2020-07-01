@@ -15,8 +15,7 @@ class ModelosTest < ApplicationSystemTestCase
     click_on "New Modelo"
 
     fill_in "Descripcion", with: @modelo.descripcion
-    fill_in "Marca", with: @modelo.marca
-    fill_in "References", with: @modelo.references
+    fill_in "Marca", with: @modelo.marca_id
     click_on "Create Modelo"
 
     assert_text "Modelo was successfully created"
@@ -28,8 +27,7 @@ class ModelosTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Descripcion", with: @modelo.descripcion
-    fill_in "Marca", with: @modelo.marca
-    fill_in "References", with: @modelo.references
+    fill_in "Marca", with: @modelo.marca_id
     click_on "Update Modelo"
 
     assert_text "Modelo was successfully updated"

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :plans
   resources :modelos
+  resources :plans
+  
   resources :marcas
   get 'logout' => 'sessions#logout'
   get 'login' => "sessions#login"

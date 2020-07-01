@@ -1,22 +1,22 @@
 
-
 <div class="row">
     <div class="col-12">
         <div class="card">
 
             <div class="card-header">
-                <div class="card-title">Modelo</div>
+                <div class="card-title">Nuevo modelo</div>
 
             </div>
             <div class="card-body">
-                <%= render 'form', modelo: @modelo %>
 
+                <%= render 'form', modelo: @modelo %>
             </div>
         </div>
     
     </div>
 </div>
 
+<%= link_to 'Back', modelos_path, :class => 'btn btn-link'  %>
 
 
-<%= link_to 'Back', modelos_path, class: 'btn btn-link' %>
+

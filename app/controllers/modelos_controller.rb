@@ -70,6 +70,6 @@ class ModelosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def modelo_params
-      params.require(:modelo).permit(:descripcion, :marca, :references)
+      params.require(:modelo).permit(:descripcion, :marca_id)
     end
 end

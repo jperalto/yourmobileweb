@@ -1,6 +1,21 @@
-<h1>Editing Modelo</h1>
 
-<%= render 'form', modelo: @modelo %>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
 
-<%= link_to 'Show', @modelo %> |
-<%= link_to 'Back', modelos_path %>
+            <div class="card-header">
+                <div class="card-title">Editar modelo</div>
+
+            </div>
+            <div class="card-body">
+                <%= render 'form', modelo: @modelo %>
+
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+
+<%= link_to 'Show', @modelo, class: 'btn btn-link'  %> |
+<%= link_to 'Back', modelos_path, class: 'btn btn-link' %>
