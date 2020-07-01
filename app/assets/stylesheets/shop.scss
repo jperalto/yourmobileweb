@@ -4,3 +4,12 @@
 
 @import 'frontend/banner';
 @import 'frontend/category';
+
+.card-product__img {
+    height: 316px;
+    position: relative;
+    
+    .card-img {
+        vertical-align: middle;
+    }
+}
