@@ -81,8 +81,8 @@
                   <li class="nav-item"><a class="nav-link" href="https://www.apple.com/la/">Apple</a></li>
                   <li class="nav-item"><a class="nav-link" href="https://www.samsung.com/pe/">Samsung</a></li>
                 </ul>
-							</li>
-							<li class="nav-item active submenu dropdown">
+			</li>
+							<!-- <li class="nav-item active submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                   aria-expanded="false">Mi cuenta</a>
                 <ul class="dropdown-menu">
@@ -90,7 +90,7 @@
                   <li class="nav-item"><a class="nav-link" href="/register">Registro</a></li>
                   
                 </ul>
-              </li>
+              </li> -->
 
               <li class="nav-item">
               	
@@ -112,7 +112,7 @@
 				  </button>
 				</li>
 			  <% else %>
-			  	<%= link_to 'Login', new_user_session_path, class: 'button button-header' %> 
+			  	<%= link_to 'Mi cuenta', new_user_session_path, class: 'button button-header' %> 
 			  <% end %>
 
               <!--<li class="nav-item">
@@ -142,9 +142,7 @@
   Logged in as <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: 'delete', :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+
 <% end %>
 </p>
 	  <% if notice %>
