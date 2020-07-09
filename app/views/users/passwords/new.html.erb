@@ -1,16 +1,66 @@
-<h2>Forgot your password?</h2>
+<%= content_for :styles do %>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+	<%= stylesheet_link_tag 'login', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%= content_for :banner do %>
+
+  <!-- ================ start banner area ================= -->	
+	<section class="blog-banner-area" id="category">
+		<div class="container h-100">
+			<div class="blog-banner">
+				<div class="text-center">
+					<h1>Login / Registrate</h1>
+					<nav aria-label="breadcrumb" class="banner-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Login/Registrate</li>
+            </ol>
+          </nav>
+				</div>
+			</div>
+    </div>
+	</section>
+	<!-- ================ end banner area ================= -->
+
+<% end %>
+  
+  
+  <!--================Login Box Area =================-->
+	<section class="login_box_area section-margin">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="login_box_img">
+						<div class="hover">
+							<h4>¿Ya tienes una cuenta?</h4>
+							<a class="button button-account" href="/users/sign_in">Inicia Sesión</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="login_form_inner register_form_inner">
+            <h3>¿Olvidaste tu clave?</h3>
+
+            <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, :class => 'row login_form' }) do |f| %>
+              <%= render "devise/shared/error_messages", resource: resource %>
+
+              <div class="col-md-12 form-group">
+                <!-- <%= f.label :email %><br />-->
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => 'form-control', :placeholder => 'Correo' %>
+              </div>
+
+              <div class="col-md-12 form-group">
+                <%= f.submit "Recuperar mi contraseña", class: 'button button-login w-100' %>
+              </div>
+            <% end %>
+
+            <!-- <%= render "devise/shared/links" %> -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Login Box Area =================-->
